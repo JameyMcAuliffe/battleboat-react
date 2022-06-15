@@ -1,0 +1,41 @@
+.square {
+    background: blue;
+    border: 2px solid darkblue;
+    width: 2.8rem;
+    height: 2.8rem;
+}
+
+.ship {
+    background: gray;
+    border: 2px solid darkblue;
+    width: 2.8rem;
+    height: 2.8rem;
+}
+
+.hit {
+    background: red;
+    border: 2px solid darkblue;
+    width: 2.8rem;
+    height: 2.8rem;
+}
+
+.miss {
+    background: white;
+    border: 2px solid darkblue;
+    width: 2.8rem;
+    height: 2.8rem;
+}
+
+.place {
+    background: orange;
+    border: 2px solid darkblue;
+    width: 2.8rem;
+    height: 2.8rem;
+}
+
+.error {
+    background: darkslategray;
+    border: 2px solid darkblue;
+    width: 2.8rem;
+    height: 2.8rem;
+}
