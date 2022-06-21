@@ -9,7 +9,7 @@ const Board = () => {
     const { state } = useContext(GameContext);
     const { user } = state.boardState;
     useEffect(() => {
-        //console.log('Board: ', user);
+        //console.log('Board: ', user.board);
     },[])
 
     const condition = (square) => {
@@ -29,7 +29,7 @@ const Board = () => {
     }
 
     let buildRows = (user => {
-        return user.map(row => {
+        return user.board.map(row => {
             let key = row[0].id;
             return (<div className="row" key={key}>
                 {row.map(square => {

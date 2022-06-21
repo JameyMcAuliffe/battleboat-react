@@ -1,58 +1,52 @@
 import { board } from '../Board/Rows/rows';
 
-let buildState = (row) => {
-    return row.map(square => {
-        return {
-            ship: false,
-            hit: false,
-            id: square.id,
-            place: false
-        }
-    })
-}
-
-let a = buildState(board.a);
-let b = buildState(board.b);
-let c = buildState(board.c);
-let d = buildState(board.d);
-let e = buildState(board.e);
-let f = buildState(board.f);
-let g = buildState(board.g);
-let h = buildState(board.h);
-let i = buildState(board.i);
-let j = buildState(board.j);
-
-let defaultBoardState = {
-    user: [a,b,c,d,e,f,g,h,i,j],
-    computer: [a,b,c,d,e,f,g,h,i,j]
-}
-
-let shipsArray = [
+const ships = [
     {
         name: "Carrier",
         size: 5,
-        id: 0
+        id: 0,
+        placed: false,
+        sunk: false
     },
     {
         name: "Battleship",
         size: 4,
-        id: 1
+        id: 1,
+        placed: false,
+        sunk: false
     },
     {
         name: "Cruiser",
         size: 3,
-        id: 2
+        id: 2,
+        placed: false,
+        sunk: false
     },
     {
         name: "Submarine",
         size: 3,
-        id: 3
+        id: 3,
+        placed: false,
+        sunk: false
     },
     {
         name: "Destroyer",
         size: 2,
-        id: 4
+        id: 4,
+        placed: false,
+        sunk: false
     }
 ];
 
-export { defaultBoardState, shipsArray };
+const defaultBoardState = {
+    user: {
+        board,
+        ships
+    },
+    computer: {
+        board,
+        ships
+    }
+}
+
+export { defaultBoardState }

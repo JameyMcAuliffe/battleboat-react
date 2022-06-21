@@ -1,21 +1,41 @@
-const shipSetupReducer = (state, action) => {
+// const shipSetupReducer = (state, action) => {
+//     return {
+//         ...state,
+//         boardState: {
+//             ...state.boardState,
+//             user: {
+//                 ...state.boardState.user,
+//                 board: action.payload
+//             }
+//         }
+//     }
+// }
+
+const userShipReducer = (state, action) => {
     return {
         ...state,
         boardState: {
             ...state.boardState,
-            user: action.payload
+            user: {
+                ...state.boardState.user,
+                board: action.payload
+            }
         }
     }
 }
 
-const moveShipReducer = (state, action) => {
+const placeUserShipReducer = (state, action) => {
     return {
         ...state,
         boardState: {
             ...state.boardState,
-            user: action.payload
+            user: {
+                ...state.boardState.user,
+                board: action.payload.board,
+                ships: action.payload.ships
+            }
         }
     }
 }
 
-export {shipSetupReducer, moveShipReducer};
+export {userShipReducer, placeUserShipReducer};

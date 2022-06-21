@@ -1,7 +1,8 @@
 import React from 'react';
 
 const ShipCycle = ({ cycledShip }) => {
-    return <h1>{cycledShip.name}</h1>
+    let result = cycledShip === undefined ? 'Submit?' : cycledShip.name;
+    return <h1>{result}</h1>
 }
 
 export default ShipCycle; 
